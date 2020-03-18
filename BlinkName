@@ -1,0 +1,67 @@
+int led1 = D0;
+int led2 = D7; 
+
+void setup() {
+   pinMode(led1, OUTPUT);
+   pinMode(led2, OUTPUT);
+
+}
+
+int dot(){
+
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, HIGH);
+  delay(1000);
+
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  delay(1000);
+    return 1;
+}
+
+int dash(){
+
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, HIGH);
+  delay(2000);
+
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  delay(1000);
+    return 1;
+}
+
+void loop() {
+
+//Morsecode: .- .-.. -... . .-. -
+
+dot();
+dash();
+//a
+
+dot();
+dash();
+dot();
+dot();
+//l
+
+dash();
+dot();
+dot();
+dot();
+//b
+
+dot();
+//e
+
+dot();
+dash();
+dot();
+//r
+
+dash();
+//t
+}
+
+
+
